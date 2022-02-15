@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <!--- added delivery date in sales_order table !-->
+    <table name="sales_order" resource="sales" engine="innodb" comment="Sales Order">
+        <column xsi:type="timestamp" name="delivery_date" on_update="false" nullable="true" comment="Delivery Date"/>
+    </table>
+    <!--- added delivery date in sales_order table !-->
+    <!--- added delivery date in sales_order_grid table !-->
+    <table name="sales_order_grid" resource="sales" engine="innodb" comment="Quote">
+        <column xsi:type="timestamp" name="delivery_date" on_update="false" nullable="true" comment="Delivery Date"/>
+    </table>
+    <!--- added delivery date in sales_order_grid table !-->
+</schema>
